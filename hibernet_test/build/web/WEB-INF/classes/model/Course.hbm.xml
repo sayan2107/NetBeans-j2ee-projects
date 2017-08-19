@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2017 9:27:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Course" table="COURSE" schema="J2EE" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="course" type="string">
+            <column name="COURSE" length="20" not-null="true" />
+        </property>
+        <property name="fees" type="long">
+            <column name="FEES" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="duration" type="long">
+            <column name="DURATION" precision="10" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
